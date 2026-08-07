@@ -138,13 +138,13 @@ const cardObserver = new IntersectionObserver((entries)=>{
 
 cardObserver.observe(document.querySelector("#projects"));
 
-/ =====================================
+/* =====================================
 //
 // MOBILE NAVIGATION
 //
 // Opens and closes the mobile menu.
 //
-// =====================================
+// =====================================*/
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
