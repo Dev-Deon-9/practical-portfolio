@@ -774,3 +774,73 @@ nav a.active{
     }
 
 }
+/* =====================================
+
+   MOBILE NAVIGATION
+
+   Hidden until the menu button is tapped.
+
+====================================== */
+
+#menuBtn{
+
+    display:none;
+
+    font-size:30px;
+
+    color:#00D9FF;
+
+    cursor:pointer;
+
+}
+
+#mobileMenu{
+
+    position:fixed;
+
+    top:90px;
+
+    right:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+#mobileMenu a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:20px;
+
+}
+/* =====================================
+
+   MOBILE VIEW
+
+====================================== */
+
+@media (max-width:768px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    #menuBtn{
+
+        display:block;
+
+    }
+
+}
