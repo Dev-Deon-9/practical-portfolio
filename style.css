@@ -797,35 +797,31 @@ nav a.active{
 
     position: fixed;
 
-    top: 90px;
+    top: 95px;
 
-    right: 8px;
+    left: 0;
 
-    width: 100px;
+    width: 100%;
 
-    padding: 25px;
+    background: rgba(17,24,39,.98);
 
     display: flex;
 
-    flex-direction: column;
+    justify-content: space-evenly;
 
-    gap: 25px;
+    align-items: center;
 
-    background: rgba(17,24,39,.95);
+    padding: 18px 0;
 
-    border: 1px solid #00D9FF;
+    border-top: 1px solid rgba(255,255,255,.08);
 
-    border-radius: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
 
-    box-shadow: 0 0 25px rgba(0,217,255,.25);
+    transform: translateY(-120%);
 
-    backdrop-filter: blur(10px);
+    transition: .45s ease;
 
-    opacity: 0;
-
-    pointer-events: none;
-
-    z-index: 1000;
+    z-index: 999;
 
 }
 
@@ -838,24 +834,27 @@ nav a.active{
 ====================================== */
 #mobileMenu a{
 
-    text-decoration: none;
+    color:white;
 
-    color: #00D9FF;
+    text-decoration:none;
 
-    font-size: 23px;
+    font-size:18px;
 
-    font-weight: 600;
+    font-weight:600;
 
-    transition: .35s;
+    transition:.3s;
 
 }
 #mobileMenu a:hover{
 
-    color: white;
+    color:#00D9FF;
 
-    transform: translateX(-8px);
+    text-shadow:0 0 12px #00D9FF;
 
-    text-shadow: 0 0 15px #00D9FF;
+}
+#mobileMenu.active{
+
+    transform:translateY(0);
 
 }
 /* =====================================
