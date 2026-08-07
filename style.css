@@ -733,16 +733,44 @@ nav a.active{
     text-shadow:0 0 10px #00D9FF;
 
 }
+/* =====================================
 
+   MOBILE RESPONSIVENESS
 
+====================================== */
 
-nav a.active{
+@media (max-width:768px){
 
-    color:#00D9FF !important;
+    .about-container{
 
-    font-weight:700;
+        flex-direction:column;
 
-    text-shadow:0 0 12px #00D9FF;
+        text-align:center;
+
+        gap:35px;
+
+    }
+
+    .about-image{
+
+        width:100%;
+
+    }
+
+    .image-placeholder{
+
+        width:220px;
+
+        height:220px;
+
+        font-size:70px;
+
+    }
+
+    .about-text{
+
+        width:100%;
+
+    }
 
 }
- 
