@@ -180,3 +180,41 @@ window.addEventListener("scroll", () => {
     });
 
 });
+// =====================================
+//
+// MOBILE NAVIGATION
+//
+// Opens and closes the mobile menu.
+//
+// =====================================
+const menuBtn = document.getElementById("menuBtn");
+
+const mobileMenu = document.getElementById("mobileMenu");
+
+let menuOpen = false;
+
+menuBtn.addEventListener("click", () => {
+
+    if (!menuOpen) {
+
+        mobileMenu.style.opacity = "1";
+
+        mobileMenu.style.pointerEvents = "auto";
+
+        menuBtn.innerHTML = "✕";
+
+        menuOpen = true;
+
+    } else {
+
+        mobileMenu.style.opacity = "0";
+
+        mobileMenu.style.pointerEvents = "none";
+
+        menuBtn.innerHTML = "☰";
+
+        menuOpen = false;
+
+    }
+
+});
