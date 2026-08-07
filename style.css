@@ -858,11 +858,7 @@ nav a.active{
     text-shadow: 0 0 15px #00D9FF;
 
 }
-#mobileMenu.active{
 
-    transform:translateY(0);
-
-}
 /* =====================================
 
    MOBILE MENU ACTIVE
