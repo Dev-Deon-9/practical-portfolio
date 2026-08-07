@@ -799,11 +799,11 @@ nav a.active{
 
     top: 90px;
 
-    right: 8px;
+    right: 20px;
 
-    width: 180px;
+    width: 220px;
 
-    padding: 20px;
+    padding: 25px;
 
     display: flex;
 
@@ -811,7 +811,7 @@ nav a.active{
 
     gap: 25px;
 
-    background: rgb(62, 74, 105);
+    background: rgba(17,24,39,.95);
 
     border: 1px solid #00D9FF;
 
