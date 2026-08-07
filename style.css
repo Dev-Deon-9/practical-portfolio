@@ -812,6 +812,10 @@ nav a.active{
 
     pointer-events:none;
 
+    transform:translateX(80px);
+
+    transition:0.4s ease;
+
 }
 
 #mobileMenu a{

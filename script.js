@@ -188,7 +188,6 @@ window.addEventListener("scroll", () => {
 //
 // =====================================
 const menuBtn = document.getElementById("menuBtn");
-
 const mobileMenu = document.getElementById("mobileMenu");
 
 let menuOpen = false;
@@ -198,21 +197,19 @@ menuBtn.addEventListener("click", () => {
     if (!menuOpen) {
 
         mobileMenu.style.opacity = "1";
-
         mobileMenu.style.pointerEvents = "auto";
+        mobileMenu.style.transform = "translateX(0)";
 
         menuBtn.innerHTML = "✕";
-
         menuOpen = true;
 
     } else {
 
         mobileMenu.style.opacity = "0";
-
         mobileMenu.style.pointerEvents = "none";
+        mobileMenu.style.transform = "translateX(80px)";
 
         menuBtn.innerHTML = "☰";
-
         menuOpen = false;
 
     }
