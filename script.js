@@ -196,22 +196,48 @@ menuBtn.addEventListener("click", () => {
 
     if (!menuOpen) {
 
-        mobileMenu.style.opacity = "1";
-        mobileMenu.style.pointerEvents = "auto";
-        mobileMenu.style.transform = "translateX(0)";
+    mobileMenu.style.opacity = "1";
 
-        menuBtn.innerHTML = "✕";
-        menuOpen = true;
+    mobileMenu.style.pointerEvents = "auto";
+
+    mobileMenu.style.transform = "translateX(0)";
+
+    const links = mobileMenu.querySelectorAll("a");
+
+    links.forEach((link) => {
+
+        link.style.opacity = "1";
+
+        link.style.transform = "translateX(0)";
+
+    });
+
+    menuBtn.innerHTML = "✕";
+
+    menuOpen = true;
 
     } else {
 
-        mobileMenu.style.opacity = "0";
-        mobileMenu.style.pointerEvents = "none";
-        mobileMenu.style.transform = "translateX(80px)";
+    const links = mobileMenu.querySelectorAll("a");
 
-        menuBtn.innerHTML = "☰";
-        menuOpen = false;
+    links.forEach((link) => {
 
-    }
+        link.style.opacity = "0";
+
+        link.style.transform = "translateX(50px)";
+
+    });
+
+    mobileMenu.style.opacity = "0";
+
+    mobileMenu.style.pointerEvents = "none";
+
+    mobileMenu.style.transform = "translateX(80px)";
+
+    menuBtn.innerHTML = "☰";
+
+    menuOpen = false;
+
+}
 
 });

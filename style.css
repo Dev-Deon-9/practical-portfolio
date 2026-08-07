@@ -818,6 +818,15 @@ nav a.active{
 
 }
 
+/* =====================================
+
+   MOBILE MENU LINKS
+
+   Each link starts hidden
+   and slides in from the right.
+
+====================================== */
+
 #mobileMenu a{
 
     text-decoration:none;
@@ -826,7 +835,52 @@ nav a.active{
 
     font-size:20px;
 
+    opacity:0;
+
+    transform:translateX(50px);
+
+    transition:0.4s ease;
+
 }
+/* =====================================
+
+   MOBILE MENU ANIMATION
+
+   Links appear one
+   after another.
+
+====================================== */
+
+#mobileMenu a:nth-child(1){
+
+    transition-delay:0s;
+
+}
+
+#mobileMenu a:nth-child(2){
+
+    transition-delay:.1s;
+
+}
+
+#mobileMenu a:nth-child(3){
+
+    transition-delay:.2s;
+
+}
+
+#mobileMenu a:nth-child(4){
+
+    transition-delay:.3s;
+
+}
+
+#mobileMenu a:nth-child(5){
+
+    transition-delay:.4s;
+
+}
+
 /* =====================================
 
    MOBILE VIEW
