@@ -878,25 +878,26 @@ nav a.active{
 }
 
 .skills-grid{
-    gap:12px;
-    transform:
-    translateX(5px);
+    gap:14px;
+    transform:translateX(5px);
 }
 
 .skill-card{
-    padding:8px;
-    gap:10px;
-    border-radius:12px;
+    padding:14px;
+    min-height:55px;
+    gap:12px;
+    border-radius:14px;
 }
 
 .skill-card img{
-    width:30px;
-    height:30px;
+    width:32px;
+    height:32px;
 }
 
 .skill-card span{
-    font-size:15px;
+    font-size:16px;
 }
+
 /* =====================================
 
    MOBILE NAVIGATION
