@@ -873,6 +873,8 @@ nav a.active{
 
 .skills-grid{
     gap:12px;
+    transform:
+    translateX(5px);
 }
 
 .skill-card{
