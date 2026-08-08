@@ -869,6 +869,26 @@ nav a.active{
     }
 
 }
+/* SKILLS MOBILE */
+
+.skills-grid{
+    gap:12px;
+}
+
+.skill-card{
+    padding:12px;
+    gap:10px;
+    border-radius:12px;
+}
+
+.skill-card img{
+    width:30px;
+    height:30px;
+}
+
+.skill-card span{
+    font-size:15px;
+}
 /* =====================================
 
    MOBILE NAVIGATION
