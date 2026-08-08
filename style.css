@@ -871,10 +871,16 @@ nav a.active{
 }
 /* SKILLS MOBILE */
 
+#skills{
+    min-height:auto;
+    padding-top:60px;
+    padding-bottom:30px;
+}
+
 .skills-grid{
     gap:12px;
     transform:
-    translateX(8px);
+    translateX(5px);
 }
 
 .skill-card{
