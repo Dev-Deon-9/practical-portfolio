@@ -108,30 +108,84 @@ main{
     transform:rotate(180deg);
 }
 /* =====================================
+   SMALL CIRCUIT BRANCHES
+====================================== */
+
+.branch{
+    position:absolute;
+    width:70px;
+    height:1px;
+
+    background:rgba(0,217,255,.12);
+
+    box-shadow:0 0 5px rgba(0,217,255,.2);
+
+    transform-origin:left center;
+}
+
+
+/* Branch 1 */
+
+.branch-1{
+    left:35%;
+    top:0;
+    transform:rotate(90deg);
+}
+
+
+/* Branch 2 */
+
+.branch-2{
+    left:50%;
+    top:2px;
+    width:55px;
+}
+
+
+/* Branch 3 */
+
+.branch-3{
+    left:65%;
+    top:0;
+    width:45px;
+    transform:rotate(90deg);
+}
+
+/* =====================================
    CIRCUIT ENERGY PULSE
 ====================================== */
 
+
 .circuit::before{
     content:"";
+
     position:absolute;
-    top:-2px;
-    left:-30px;
-    width:30px;
+
+    top:50%;
+    left:0;
+
+    width:35px;
     height:6px;
+
+    transform:translateY(-50%);
+
     border-radius:50%;
+
     background:#00D9FF;
+
     box-shadow:
-        0 0 8px #00D9FF,
-        0 0 18px #00D9FF,
+        0 0 5px #00D9FF,
+        0 0 15px #00D9FF,
         0 0 30px #00D9FF;
 
-    animation:circuitPulse 4s linear infinite;
+    animation:circuitPulse 3s linear infinite;
 }
+
 
 @keyframes circuitPulse{
 
     0%{
-        left:-30px;
+        left:0;
         opacity:0;
     }
 
@@ -139,7 +193,7 @@ main{
         opacity:1;
     }
 
-    80%{
+    90%{
         opacity:1;
     }
 
