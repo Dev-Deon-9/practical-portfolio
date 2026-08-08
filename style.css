@@ -102,6 +102,48 @@ body{
     width:200px;
     transform:rotate(180deg);
 }
+/* =====================================
+   CIRCUIT ENERGY PULSE
+====================================== */
+
+.circuit::before{
+    content:"";
+    position:absolute;
+    top:-2px;
+    left:-30px;
+    width:30px;
+    height:6px;
+    border-radius:50%;
+    background:#00D9FF;
+    box-shadow:
+        0 0 8px #00D9FF,
+        0 0 18px #00D9FF,
+        0 0 30px #00D9FF;
+
+    animation:circuitPulse 4s linear infinite;
+}
+
+@keyframes circuitPulse{
+
+    0%{
+        left:-30px;
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        left:100%;
+        opacity:0;
+    }
+
+}
 
 /* =====================================
 
