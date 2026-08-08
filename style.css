@@ -741,6 +741,34 @@ nav a.active{
 
 @media (max-width:768px){
 
+    /* HERO MOBILE */
+
+.hero-content h1{
+
+    font-size:38px;
+
+    min-height:60px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+.hero-buttons button{
+
+    padding:13px 28px;
+
+    font-size:16px;
+
+}
+
     .about-container{
 
         flex-direction:column;
