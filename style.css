@@ -628,21 +628,15 @@ nav a:hover{
     }
 
 }
-
 /* =====================================
 
-   SKILLS SECTION
-
-   Displays progress bars for
-   your technical skills.
+   ABOUT SECTION
 
 ====================================== */
 
-#skills{
+#about{
 
     min-height:100vh;
-
-    padding:80px 10%;
 
     display:flex;
 
@@ -650,21 +644,81 @@ nav a:hover{
 
     align-items:center;
 
+    padding:80px 10%;
+
 }
 
-.skills-container{
+.about-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
 
     width:100%;
 
-    max-width:800px;
+}
+
+.about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
 
 }
 
-.skills-container h2{
+.image-placeholder{
 
-    text-align:center;
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    border:2px solid #00D9FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:90px;
+
+}
+
+.about-text{
+
+    flex:1;
+
+}
+
+.about-text h2{
 
     font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+.about-text p{
+
+    font-size:18px;
+
+    color:#B7C2D0;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
 /* =====================================
    ABOUT ENTRANCE ANIMATION
 ====================================== */
@@ -692,6 +746,7 @@ nav a:hover{
     animation:aboutTextIn .7s ease forwards;
     animation-delay:.2s;
 }
+
 
 /* Text reveals from the first character */
 
@@ -765,7 +820,51 @@ nav a:hover{
 
     to{
         opacity:1;
-    
+        transform:translateX(0);
+    }
+
+}
+
+
+
+
+/* =====================================
+
+   SKILLS SECTION
+
+   Displays progress bars for
+   your technical skills.
+
+====================================== */
+
+#skills{
+
+    min-height:100vh;
+
+    padding:80px 10%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.skills-container{
+
+    width:100%;
+
+    max-width:800px;
+
+}
+
+.skills-container h2{
+
+    text-align:center;
+
+    font-size:45px;
+
     margin-bottom:50px;
 
 }
@@ -833,6 +932,8 @@ nav a:hover{
     width:84%;
 
 }
+
+
 /* =====================================
 
    SKILLS GRID
@@ -900,6 +1001,57 @@ nav a:hover{
     box-shadow:0 0 20px rgba(0,217,255,.25);
 
 }
+
+
+
+/* Text slides in from the left */
+
+@keyframes aboutTextIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Text expands from the first character */
+
+@keyframes aboutLineReveal{
+
+    from{
+
+        width:0;
+
+        opacity:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
 /* =====================================
 
    PROJECTS SECTION
