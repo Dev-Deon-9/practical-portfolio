@@ -80,27 +80,38 @@ hiddenElements.forEach((element) => {
 //
 // SKILL BAR ANIMATION
 //
-// Runs only once.
+// Replays every time Skills
+// enters the screen.
 //
 // =====================================
 
 const bars = document.querySelectorAll(".progress-bar");
 
-let animated = false;
+const skillSection = document.querySelector("#skills");
 
 const skillObserver = new IntersectionObserver((entries) => {
 
     entries.forEach((entry) => {
 
-        if(entry.isIntersecting && !animated){
+        if(entry.isIntersecting){
 
-            bars.forEach((bar)=>{
+            bars.forEach((bar) => {
 
-                bar.style.width = bar.dataset.width;
+                // Reset the bar
+                bar.style.width = "0%";
 
             });
 
-            animated = true;
+            // Small delay so the reset is visible
+            setTimeout(() => {
+
+                bars.forEach((bar) => {
+
+                    bar.style.width = bar.dataset.width;
+
+                });
+
+            }, 100);
 
         }
 
@@ -108,31 +119,42 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 });
 
-skillObserver.observe(document.querySelector("#skills"));
+skillObserver.observe(skillSection);
 
 // =====================================
 //
 // PROJECT CARD ANIMATION
 //
-// Cards appear one after another.
+// Replays every time Projects
+// enters the screen.
 //
 // =====================================
 
 const cards = document.querySelectorAll(".hidden-card");
 
-const cardObserver = new IntersectionObserver((entries)=>{
+const projectsSection = document.querySelector("#projects");
 
-    entries.forEach((entry)=>{
+const cardObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
 
         if(entry.isIntersecting){
 
-            cards.forEach((card,index)=>{
+            // Reset all cards
+            cards.forEach((card) => {
 
-                setTimeout(()=>{
+                card.classList.remove("show-card");
+
+            });
+
+            // Replay cards one after another
+            cards.forEach((card, index) => {
+
+                setTimeout(() => {
 
                     card.classList.add("show-card");
 
-                },index*250);
+                }, index * 250);
 
             });
 
@@ -142,7 +164,7 @@ const cardObserver = new IntersectionObserver((entries)=>{
 
 });
 
-cardObserver.observe(document.querySelector("#projects"));
+cardObserver.observe(projectsSection);
 
 /* =====================================
 //
