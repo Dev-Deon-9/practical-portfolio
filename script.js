@@ -40,12 +40,13 @@ function typeWriter(){
 }
 
 typeWriter();
+
 // =====================================
 //
 // SCROLL REVEAL ANIMATION
 //
-// Shows sections as they enter
-// the screen.
+// Replays every time a section
+// enters the screen.
 //
 // =====================================
 
@@ -59,6 +60,10 @@ const observer = new IntersectionObserver((entries) => {
 
             entry.target.classList.add("show");
 
+        } else {
+
+            entry.target.classList.remove("show");
+
         }
 
     });
@@ -70,6 +75,7 @@ hiddenElements.forEach((element) => {
     observer.observe(element);
 
 });
+
 // =====================================
 //
 // SKILL BAR ANIMATION
