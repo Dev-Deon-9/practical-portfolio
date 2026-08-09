@@ -526,6 +526,9 @@ nav a:hover{
 /* =====================================
    ABOUT ENTRANCE ANIMATION
 ====================================== */
+/* =====================================
+   ABOUT ENTRANCE ANIMATION
+====================================== */
 
 .about-image{
     opacity:0;
@@ -540,48 +543,62 @@ nav a:hover{
 }
 
 
-/* Activate when About becomes visible */
+/* Activate when About gets .show */
 
-#about:not(.hidden) .about-image{
+#about.show .about-image{
     animation:aboutImageIn .9s ease forwards;
 }
 
-#about:not(.hidden) .about-text h2{
+#about.show .about-text h2{
     animation:aboutTextIn .7s ease forwards;
     animation-delay:.2s;
 }
 
-#about:not(.hidden) .about-line{
-    animation:aboutTextIn .7s ease forwards;
+/* Text reveals from the first character */
+
+.about-line{
+    display:block;
+    opacity:0;
+    overflow:hidden;
+    white-space:nowrap;
+    width:0;
+    transform:none;
 }
 
-#about:not(.hidden) .about-line:nth-child(1){
+#about.show .about-line{
+    animation:aboutLineReveal 1s ease forwards;
+}
+
+#about.show .about-line:nth-child(1){
     animation-delay:.35s;
 }
 
-#about:not(.hidden) .about-line:nth-child(2){
+#about.show .about-line:nth-child(2){
     animation-delay:.45s;
 }
 
-#about:not(.hidden) .about-line:nth-child(3){
+#about.show .about-line:nth-child(3){
     animation-delay:.55s;
 }
 
-#about:not(.hidden) .about-line:nth-child(4){
+#about.show .about-line:nth-child(4){
     animation-delay:.65s;
 }
 
-#about:not(.hidden) .about-line:nth-child(5){
+#about.show .about-line:nth-child(5){
     animation-delay:.75s;
 }
 
-#about:not(.hidden) .about-text button{
+
+/* Download CV */
+
+#about.show .about-text button{
     animation:aboutTextIn .7s ease forwards;
     animation-delay:.95s;
 }
 
 
-/* Profile slides from the left */
+/* Profile slides in from the left */
 
 @keyframes aboutImageIn{
 
@@ -613,6 +630,7 @@ nav a:hover{
     }
 
 }
+
 /* =====================================
 
    SKILLS SECTION
