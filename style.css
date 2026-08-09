@@ -526,9 +526,6 @@ nav a:hover{
 /* =====================================
    ABOUT ENTRANCE ANIMATION
 ====================================== */
-/* =====================================
-   ABOUT ENTRANCE ANIMATION
-====================================== */
 
 .about-image{
     opacity:0;
@@ -553,6 +550,7 @@ nav a:hover{
     animation:aboutTextIn .7s ease forwards;
     animation-delay:.2s;
 }
+
 
 /* Text reveals from the first character */
 
@@ -667,7 +665,107 @@ nav a:hover{
     text-align:center;
 
     font-size:45px;
+/* =====================================
+   ABOUT ENTRANCE ANIMATION
+====================================== */
 
+.about-image{
+    opacity:0;
+    transform:translateX(-100px);
+}
+
+.about-text h2,
+.about-line,
+.about-text button{
+    opacity:0;
+    transform:translateX(-35px);
+}
+
+
+/* Activate when About gets .show */
+
+#about.show .about-image{
+    animation:aboutImageIn .9s ease forwards;
+}
+
+#about.show .about-text h2{
+    animation:aboutTextIn .7s ease forwards;
+    animation-delay:.2s;
+}
+
+/* Text reveals from the first character */
+
+.about-line{
+    display:block;
+    opacity:0;
+    overflow:hidden;
+    white-space:nowrap;
+    width:0;
+    transform:none;
+}
+
+#about.show .about-line{
+    animation:aboutLineReveal 1s ease forwards;
+}
+
+#about.show .about-line:nth-child(1){
+    animation-delay:.35s;
+}
+
+#about.show .about-line:nth-child(2){
+    animation-delay:.45s;
+}
+
+#about.show .about-line:nth-child(3){
+    animation-delay:.55s;
+}
+
+#about.show .about-line:nth-child(4){
+    animation-delay:.65s;
+}
+
+#about.show .about-line:nth-child(5){
+    animation-delay:.75s;
+}
+
+
+/* Download CV */
+
+#about.show .about-text button{
+    animation:aboutTextIn .7s ease forwards;
+    animation-delay:.95s;
+}
+
+
+/* Profile slides in from the left */
+
+@keyframes aboutImageIn{
+
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* Text slides in from the left */
+
+@keyframes aboutTextIn{
+
+    from{
+        opacity:0;
+        transform:translateX(-35px);
+    }
+
+    to{
+        opacity:1;
+    
     margin-bottom:50px;
 
 }
