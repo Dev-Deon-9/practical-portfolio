@@ -1138,17 +1138,20 @@ footer p{
     transition:width 2s ease;
 
 }
+
 /* =====================================
-
-   PROJECT CARD ANIMATION
-
+   PROJECT CARD REVEAL
 ====================================== */
 
 .hidden-card{
 
     opacity:0;
 
-    transform:translateY(50px);
+    transform:translateY(40px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
 
 }
 
@@ -1158,9 +1161,10 @@ footer p{
 
     transform:translateY(0);
 
-    transition:all .8s ease;
-
 }
+
+
+
 /* =====================================
 
    ACTIVE NAVIGATION
